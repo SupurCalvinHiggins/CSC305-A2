@@ -1,0 +1,103 @@
+{
+    "screenName": "Video_Screen",
+    "description": "",
+    "scrollable": "false",
+    "background": "rgba(245, 236, 236, 100)",
+    "orientation": "portait",
+    "status bar visibility": "true",
+    "status bar style": "default",
+    "status bar translucent": "false",
+    "status bar color": "rgba(155, 155, 155, 100)",
+    "ui_elements": [
+        {
+            "ui_elementType": "Label",
+            "elementName": "Label1",
+            "description": "Calvin's Camera App",
+            "textFont": "",
+            "textColor": "rgba(0, 0, 0, 1)",
+            "essentials": "",
+            "textSize": "",
+            "layoutX": "33",
+            "layoutY": "0",
+            "height": "45",
+            "width": "311",
+            "resizeMode": "Stretch",
+            "visible": "true",
+            "backgroundColor": "",
+            "border": "rgba(236, 237, 237, 100)",
+            "shadow": "rgba(0, 0, 0, 0)"
+        },
+        {
+            "ui_elementType": "Button",
+            "elementName": "UntimedVideo_Button",
+            "description": "Take Video",
+            "textFont": "",
+            "textColor": "rgba(255, 255, 255, 0)",
+            "textSize": "16",
+            "disabled": " false",
+            "layoutX": "37",
+            "layoutY": "378",
+            "height": "32",
+            "width": "302",
+            "resizeMode": "Stretch",
+            "visible": "true",
+            "backgroundColor": "rgba(93, 122, 252, 100)",
+            "border": "",
+            "shadow": "rgba(0, 0, 0, 0)"
+        },
+        {
+            "ui_elementType": "Button",
+            "elementName": "FiveSecondVideo_Button",
+            "description": "Take 5 Second Video",
+            "textFont": "",
+            "textColor": "rgba(255, 255, 255, 0)",
+            "textSize": "16",
+            "disabled": " false",
+            "layoutX": "37",
+            "layoutY": "332",
+            "height": "30",
+            "width": "300",
+            "resizeMode": "Stretch",
+            "visible": "true",
+            "backgroundColor": "rgba(93, 122, 252, 100)",
+            "border": "",
+            "shadow": "rgba(0, 0, 0, 0)"
+        },
+        {
+            "ui_elementType": "Image",
+            "elementName": "Image1",
+            "description": "",
+            "Picture": "305soft.png",
+            "PictureResizeMode": "center",
+            "layoutX": "0",
+            "layoutY": "0",
+            "width": "45",
+            "height": "43",
+            "resizeMode": "Stretch",
+            "visible": "true",
+            "border": "",
+            "shadow": "rgba(0, 0, 0, 0)"
+        },
+        {
+            "ui_elementType": "Video",
+            "elementName": "Video",
+            "description": "",
+            "Video": "",
+            "Play": "false",
+            "layoutX": "32",
+            "layoutY": "76",
+            "width": "311",
+            "height": "205",
+            "resizeMode": "Stretch"
+        }
+    ],
+    "events": {
+        "when UntimedVideo_Button Click": [
+            "set Video's Video to video file from recording using back camera"
+        ],
+        "when FiveSecondVideo_Button Click": [
+            "set Video's Video to video file from 5 second recording using back camera"
+        ]
+    },
+    "functions": {}
+}
