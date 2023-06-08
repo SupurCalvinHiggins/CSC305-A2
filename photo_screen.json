@@ -46,6 +46,24 @@
             "shadow": "rgba(0, 0, 0, 0)"
         },
         {
+            "ui_elementType": "Label",
+            "elementName": "VoiceConfirm_Label",
+            "description": "Photo Confirmation?",
+            "textFont": "",
+            "textColor": "rgba(0, 0, 0, 1)",
+            "essentials": "",
+            "textSize": "",
+            "layoutX": "53",
+            "layoutY": "519",
+            "height": "29",
+            "width": "202",
+            "resizeMode": "Stretch",
+            "visible": "true",
+            "backgroundColor": "",
+            "border": "rgba(236, 237, 237, 100)",
+            "shadow": "rgba(0, 0, 0, 0)"
+        },
+        {
             "ui_elementType": "Button",
             "elementName": "PhotoTake_Button",
             "description": "Take Picture",
@@ -136,6 +154,21 @@
             "shadow": "rgba(0, 0, 0, 0)"
         },
         {
+            "ui_elementType": "Switch",
+            "elementName": "VoiceConfirm_Switch",
+            "value": "true",
+            "tintColor": "rgba(176, 176, 176, 100)",
+            "onTintColor": "rgba(208, 215, 231, 100)",
+            "thumbTintColor": "rgba(93, 122, 252, 100)",
+            "thumbTintColorWhenOff": " rgba(248, 249, 251, 100)",
+            "disabled": "false",
+            "layoutX": "266",
+            "layoutY": "523",
+            "height": "21",
+            "width": "42",
+            "resizeMode": "Stretch"
+        },
+        {
             "ui_elementType": "Image",
             "elementName": "Image2",
             "description": "",
@@ -174,7 +207,12 @@
             "set Photo_Image's Picture to photo from photo library"
         ],
         "when ScanQrcode_Button Click": [
-            "set PhotoDescription_Label's Text to barcode scanned using back camera"
+            "set PhotoDescription_Label's Text to barcode scanned using back camera",
+            {
+                "if VoiceConfirm_Switch's value": [
+                    "say 'Photo Taken' in English (en-US)"
+                ]
+            }
         ],
         "when PhotoDescription_Button Click": [
             "set PhotoDescription_Label's Text to description of image from Photo_Image's Picture"
